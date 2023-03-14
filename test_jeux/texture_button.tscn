@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://i2uxl17v8oeu"]
+
+[ext_resource type="Texture2D" uid="uid://boghpp1co0557" path="res://icon.svg" id="1_sfi5c"]
+[ext_resource type="Script" path="res://Test_textur_buton.gd" id="2_edtyd"]
+
+[node name="TextureButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_sfi5c")
+script = ExtResource("2_edtyd")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
