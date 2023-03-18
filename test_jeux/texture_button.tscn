@@ -1,12 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://i2uxl17v8oeu"]
+[gd_scene load_steps=5 format=3 uid="uid://i2uxl17v8oeu"]
 
 [ext_resource type="Texture2D" uid="uid://boghpp1co0557" path="res://icon.svg" id="1_sfi5c"]
 [ext_resource type="Script" path="res://Test_textur_buton.gd" id="2_edtyd"]
 
-[node name="TextureButton" type="TextureButton"]
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="Animation" id="Animation_qmaxl"]
+resource_name = "scal animation"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.353553, 0.353553, 0.353553),
+"update": 0,
+"values": [Vector2(2.342, 2.342), Vector2(2.579, 2.579), Vector2(2.342, 2.342)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(0.210224, 0.210224, 1, 1, 0.210224),
+"update": 0,
+"values": [Vector2(176, 296), Vector2(196, 296), Vector2(176, 296), Vector2(166.006, 296), Vector2(176, 296)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ltglh"]
+_data = {
+"scal animation": SubResource("Animation_qmaxl")
+}
+
+[node name="BoutonAnime" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0001
+offset_top = -64.0
+offset_right = 64.0002
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.342, 2.342)
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 0
 texture_normal = ExtResource("1_sfi5c")
 script = ExtResource("2_edtyd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ltglh")
+}
 
 [connection signal="button_down" from="." to="." method="_on_button_down"]

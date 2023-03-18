@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu008spsfb3ow"]
+
+[ext_resource type="Script" path="res://HUD.gd" id="1_javl5"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_javl5")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.5
+offset_top = 11.0
+offset_right = 180.5
+offset_bottom = 192.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 130
+text = "fezfzef"
+horizontal_alignment = 1
+vertical_alignment = 1
