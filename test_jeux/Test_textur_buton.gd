@@ -7,7 +7,9 @@ signal tap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
-	print('zzef')
+	rotation = 0
+	pivot_offset = (size/2)
+	position = (screen_size - size) / 2
 	pass # Replace with function body.
 
 
@@ -18,10 +20,13 @@ func _process(delta):
 func _on_button_down():
 	tap.emit()
 	i += 1
-	print("salut " + str(i))
 	if $AnimationPlayer.is_playing():
 		$AnimationPlayer.stop()
+	
+	if randi() % 2 :
+		$AnimationPlayer.play("animation droite")
+	else:
+		$AnimationPlayer.play("animation gauche")
 		
-	$AnimationPlayer.play("scal animation")
 	
 

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Test Jeux"
+config/name="Test Jeux pinata"
 run/main_scene="res://Node.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"

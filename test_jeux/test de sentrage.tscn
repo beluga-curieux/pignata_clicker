@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce4rhk41xdm46"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_r4hbj"]
+
+[node name="Button" type="Button"]
+offset_left = 5.00005
+offset_top = 316.0
+offset_right = 166.0
+offset_bottom = 347.0
+scale = Vector2(2.129, 2.129)
+pivot_offset = Vector2(80.5259, 15.4705)
+text = "zdazdazdazdazdazd
+"
+script = ExtResource("1_r4hbj")
