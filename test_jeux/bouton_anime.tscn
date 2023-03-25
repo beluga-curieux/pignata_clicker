@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm8sxnlidtc06"]
+
+[ext_resource type="Texture2D" uid="uid://bbiltvhnnqvkg" path="res://pinata_transparent.png" id="1_ojoag"]
+[ext_resource type="Script" path="res://bouton_anime2.gd" id="2_nsgbj"]
+
+[node name="BoutonAnime" type="TextureButton"]
+anchors_preset = -1
+anchor_left = 0.099
+anchor_top = 0.394
+anchor_right = 0.099
+anchor_bottom = 0.394
+offset_left = 23.48
+offset_top = -55.68
+offset_right = 483.48
+offset_bottom = 444.32
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.0872665
+scale = Vector2(2.342, 2.342)
+pivot_offset = Vector2(63.9602, 63.9451)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_ojoag")
+ignore_texture_size = true
+script = ExtResource("2_nsgbj")
+metadata/_edit_group_ = true
+
+[connection signal="button_down" from="." to="." method="_on_button_down" flags=18]
