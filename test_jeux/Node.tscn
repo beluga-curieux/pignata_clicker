@@ -2,11 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://bu008spsfb3ow" path="res://HUD.tscn" id="1_s4s22"]
 [ext_resource type="Script" path="res://Node.gd" id="1_wddpk"]
-[ext_resource type="PackedScene" uid="uid://i2uxl17v8oeu" path="res://texture_button.tscn" id="3_affsn"]
+[ext_resource type="PackedScene" uid="uid://bm8sxnlidtc06" path="res://bouton_anime.tscn" id="3_oo4eo"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_wddpk")
 
+[node name="BoutonAnime" parent="." instance=ExtResource("3_oo4eo")]
+offset_left = -261.0
+offset_top = -163.0
+offset_right = 199.0
+offset_bottom = 337.0
+
 [node name="HUD" parent="." instance=ExtResource("1_s4s22")]
 
-[node name="TextureButton" parent="." instance=ExtResource("3_affsn")]
+[connection signal="button_down" from="BoutonAnime" to="." method="_on_bouton_anime_button_down"]
