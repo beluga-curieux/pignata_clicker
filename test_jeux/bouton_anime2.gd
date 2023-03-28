@@ -25,7 +25,7 @@ func _ready():
 
 	pivot_offset = (size/2)
 	position = default_position
-	position.y *= 0.95
+	position.y *= 0.95	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
